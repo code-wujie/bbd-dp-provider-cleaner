@@ -21,6 +21,7 @@
 		<provider.common.json.version>1.0.0</provider.common.json.version>
 		<provider.common.util.version>1.0.0</provider.common.util.version>
 		<provider.common.constant.version>1.0.0</provider.common.constant.version>
+		<provider.common.worldtree.version>1.0.0</provider.common.worldtree.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<worltreeClient.version>0.0.1</worltreeClient.version>
 	</properties>
@@ -80,6 +81,12 @@
 				<artifactId>bbd-dp-provider-common-constant</artifactId>
 				<version>${provider.common.constant.version}</version>
 			</dependency>
+			
+			<dependency>
+	            <groupId>com.bbd.dataplatform.provider</groupId>
+	            <artifactId>bbd-dp-provider-common-worldtree</artifactId>
+	            <version>${provider.common.worldtree.version}</version>
+	        </dependency>
 			
 			<dependency>
                 <groupId>com.bbd.dataplatform</groupId>

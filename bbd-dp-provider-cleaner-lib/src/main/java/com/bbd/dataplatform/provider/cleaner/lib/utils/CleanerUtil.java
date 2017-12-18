@@ -11,6 +11,7 @@ import com.bbd.dataplatform.provider.common.constant.Constants.BBDERRORCODE;
 import com.bbd.dataplatform.provider.common.facade.mode.ErrorModel;
 import com.bbd.dataplatform.provider.common.facade.mode.FacadeResponse;
 import com.bbd.dataplatform.provider.common.facade.mode.ResponseCode;
+import com.bbd.dataplatform.provider.common.worldtree.WorldtreerpcClientUtil;
 
 public class CleanerUtil extends BaseConfig {
 
@@ -20,7 +21,9 @@ public class CleanerUtil extends BaseConfig {
 	
 	private static final String CLEANER_ERROR_FLAG_KEY = "bbd_cleaner_exception_log";
 	
-	private static final WorldtreerpcClientUtil clientUtil = WorldtreerpcClientUtil.getInstance();
+	private static final String PUBLIC_NAMESPASE_CLEANER_CONFIG = "bbddp.clean_config_namespase_v1";
+	
+	private static final WorldtreerpcClientUtil clientUtil = WorldtreerpcClientUtil.getInstance(PUBLIC_NAMESPASE_CLEANER_CONFIG);
 
 	/**
 	 * 处理数据清洗的逻辑
@@ -31,7 +34,7 @@ public class CleanerUtil extends BaseConfig {
 		try {
 			//获取清洗数据
 			FacadeResponse response = new FacadeResponse();
-			List<Map<String, Object>>  res = clientUtil.cleaner(data);
+			List<Map<String, Object>>  res = clientUtil.handler(data);
 			for(Map<String, Object> item : res){
 				if(item.containsKey(CLEANER_ERROR_FLAG_KEY)){
 					response.setStatusCode(ResponseCode.ERROR);

@@ -37,10 +37,10 @@
         <dependency>
             <groupId>com.bbd.dataplatform.provider</groupId>
             <artifactId>bbd-dp-provider-common-constant</artifactId>
-        </dependency>
+        </dependency> 
         <dependency>
-             <groupId>com.bbd.dataplatform</groupId>
-             <artifactId>worldtreerpc-client</artifactId>
-         </dependency>
+            <groupId>com.bbd.dataplatform.provider</groupId>
+            <artifactId>bbd-dp-provider-common-worldtree</artifactId>
+        </dependency>
 	</dependencies>
 </project>
