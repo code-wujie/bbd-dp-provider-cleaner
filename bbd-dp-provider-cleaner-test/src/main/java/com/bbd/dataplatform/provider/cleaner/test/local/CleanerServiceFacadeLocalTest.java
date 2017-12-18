@@ -25,7 +25,7 @@ public class CleanerServiceFacadeLocalTest extends BasicLocal {
     private CleanerServiceFacade cleanerServiceFacade;
     
     @Test
-    public void unit(){
+    public void cleaner(){
     	List<Map<String, Object>> datas = readLinesToListMap("datas/crawler_data_for_qyxx.json");
     	for(Map<String, Object> data : datas){
     		logger.info(cleanerServiceFacade.handle(data).toString());
