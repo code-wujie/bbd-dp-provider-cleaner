@@ -26,7 +26,7 @@
     <dubbo:registry address="zookeeper://10.28.102.151:2181?backup=10.28.102.152:2181,10.28.102.153:2181" />
  
     <!-- 用dubbo协议在20880端口暴露服务 -->
-    <dubbo:protocol name="dubbo" port="50206" payload="1073741824"/>
+    <dubbo:protocol name="dubbo" port="50210" payload="1073741824"/>
 	<!-- 管理服务 -->
 	<dubbo:service interface="com.bbd.dataplatform.provider.cleaner.facade.CleanerServiceFacade" ref="cleanerServiceFacade" />
 </beans>
