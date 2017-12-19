@@ -5,7 +5,15 @@
 	<artifactId>bbd-dp-provider-cleaner</artifactId>
 	<version>1.0.0</version>
 	<packaging>pom</packaging>
-
+	
+	<modules>
+	    <module>bbd-dp-provider-cleaner-facade</module>
+	    <module>bbd-dp-provider-cleaner-facade-imp</module>
+	    <module>bbd-dp-provider-cleaner-lib</module>
+	    <module>bbd-dp-provider-cleaner-assembly</module>
+	    <module>bbd-dp-provider-cleaner-test</module>
+	</modules>
+  
 	<properties>
 		<dubbo.version>2.5.7</dubbo.version>
 		<javassist.version>3.20.0-GA</javassist.version>
@@ -216,11 +224,5 @@
 			<url>${releases.repo}</url>
 		</repository>
 	</distributionManagement>
-  <modules>
-    <module>bbd-dp-provider-cleaner-facade</module>
-    <module>bbd-dp-provider-cleaner-facade-imp</module>
-    <module>bbd-dp-provider-cleaner-lib</module>
-    <module>bbd-dp-provider-cleaner-assembly</module>
-    <module>bbd-dp-provider-cleaner-test</module>
-  </modules>
+
 </project>
