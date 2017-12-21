@@ -55,7 +55,7 @@ public class Basic extends AbstractTestNGSpringContextTests{
 					lines.add(cls.cast(line));
 				}
 				else{
-					lines.add(JsonUtil.ToEntity(line, cls));
+					lines.add(JsonUtil.toEntity(line, cls));
 				}
 			}
 			br.close();
