@@ -38,6 +38,7 @@ public class CleanerUtil extends BaseConfig {
 			for(Map<String, Object> item : res){
 				if(item.containsKey(CLEANER_ERROR_FLAG_KEY)){
 					response.setStatusCode(ResponseCode.ERROR);
+					response.addError(new ErrorModel(BBDERRORCODE.BBD_RUN_TIME_ERROE, "清洗服务异常，存在：bbd_cleaner_exception_log。"));
 				}
 				response.addData(item);
 			}
