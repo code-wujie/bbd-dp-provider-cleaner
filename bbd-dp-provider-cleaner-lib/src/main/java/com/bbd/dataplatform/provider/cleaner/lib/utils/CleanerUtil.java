@@ -3,6 +3,7 @@ package com.bbd.dataplatform.provider.cleaner.lib.utils;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -49,7 +50,8 @@ public class CleanerUtil extends BaseConfig {
 			FacadeResponse response = new FacadeResponse();
 			response.addData(data);
 			response.setStatusCode(ResponseCode.EXCEPTION);
-			response.addError(new ErrorModel(BBDERRORCODE.BBD_RUN_TIME_ERROE, e.getMessage(), e));
+			response.addError(new ErrorModel(BBDERRORCODE.BBD_RUN_TIME_ERROE, e.getMessage(), 
+					new Exception("数据清洗出现程序上的致命错误:" + ExceptionUtils.getStackTrace(e))));
 			return response;
 		}
 	}
