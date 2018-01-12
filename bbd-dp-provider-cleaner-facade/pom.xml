@@ -22,5 +22,9 @@
 			<groupId>com.bbd.dataplatform.provider</groupId>
 			<artifactId>bbd-dp-provider-common-facade</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>com.bbd.dataplatform.provider</groupId>
+			<artifactId>bbd-dp-provider-common-exception</artifactId>
+		</dependency>
 	</dependencies>
 </project>
