@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 
 import com.bbd.dataplatform.provider.common.config.BaseConfig;
 import com.bbd.dataplatform.provider.common.constant.Constants.BBDERRORCODE;
+import com.bbd.dataplatform.provider.common.exception.BaseException;
 import com.bbd.dataplatform.provider.common.facade.mode.ErrorModel;
 import com.bbd.dataplatform.provider.common.facade.mode.FacadeResponse;
 import com.bbd.dataplatform.provider.common.facade.mode.ResponseCode;
@@ -51,7 +52,7 @@ public class CleanerUtil extends BaseConfig {
 			response.addData(data);
 			response.setStatusCode(ResponseCode.EXCEPTION);
 			response.addError(new ErrorModel(BBDERRORCODE.BBD_RUN_TIME_ERROE, e.getMessage(), 
-					new Exception("数据清洗出现程序上的致命错误:" + ExceptionUtils.getStackTrace(e))));
+					new BaseException("数据清洗出现程序上的致命错误:" + ExceptionUtils.getStackTrace(e))));
 			return response;
 		}
 	}
