@@ -8,6 +8,14 @@
 * 将清洗以后非标准数据转换为标准数据.
 * 增加数据清洗失败的监控.
 
+## 服务打包
+* 测试环境打包：clean package -Ptest
+* 生产环境打包：clean package -Ppro
+
+## 服务部署
+* 将assembly module target下的zip包进行解压，bin/start.sh即可启动。
+* 相关命令关注bin下的shell脚本。
+
 ## 输入数据数据结构
 ```javascript
 {    
