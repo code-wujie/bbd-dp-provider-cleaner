@@ -38,11 +38,10 @@
 						<configuration>
 							<artifactItems>
 								<artifactItem>
-									<groupId>com.alibaba</groupId>
-									<artifactId>dubbo</artifactId>
-									<version>${dubbo_version}</version>
+									<groupId>com.bbd.dataplatform.provider</groupId>
+									<artifactId>bbd-dp-provider-common-scripts</artifactId>
 									<outputDirectory>${project.build.directory}/dubbo</outputDirectory>
-									<includes>META-INF/assembly/**</includes>
+									<includes>META-INF/${deploy.type}/**</includes>
 								</artifactItem>
 							</artifactItems>
 						</configuration>

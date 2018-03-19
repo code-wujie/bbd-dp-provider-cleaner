@@ -32,6 +32,7 @@
 		<provider.common.worldtree.version>1.0.0</provider.common.worldtree.version>
 		<provider.common.exception.version>1.0.0</provider.common.exception.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<provider.common.scripts.version>1.0.0</provider.common.scripts.version>
 		<worltreeClient.version>0.0.1</worltreeClient.version>
 	</properties>
 
@@ -59,6 +60,12 @@
 				<groupId>com.bbd.dataplatform.provider</groupId>
 				<artifactId>bbd-dp-provider-cleaner-facade-imp</artifactId>
 				<version>${project.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>com.bbd.dataplatform.provider</groupId>
+				<artifactId>bbd-dp-provider-common-scripts</artifactId>
+				<version>${provider.common.scripts.version}</version>
 			</dependency>
 			
 			<dependency>
