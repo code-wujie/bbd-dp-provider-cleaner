@@ -26,6 +26,7 @@ public class CleanerServiceFacadeRemoteTest extends BasicRemote {
     
     @Test
     public void cleaner(){
+        System.setProperty("env","DEV");
     	List<Map<String, Object>> datas = readLinesToListMap("datas/crawler_data_for_qyxx.json");
     	for(Map<String, Object> data : datas){
     		logger.info(cleanerServiceFacade.handle(data).toString());
